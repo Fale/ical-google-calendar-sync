@@ -106,7 +106,7 @@ objects:
 - apiVersion: "v1"
   kind: "PersistentVolumeClaim"
   metadata:
-    name: "claim1"
+    name: ${SERVICE_NAME}-pv
   spec:
     accessModes:
       - "ReadWriteOnce"
@@ -156,7 +156,7 @@ objects:
               secretName: ${GCAL_CLIENT_TOKEN_FILE_SECRET}
           - name: "pvol"
             persistentVolumeClaim:
-              claimName: "claim1"
+              claimName: ${SERVICE_NAME}-pv
         containers:
         - env:
           - name: GCAL_ACCESS_TOKEN
