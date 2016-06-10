@@ -31,7 +31,7 @@
 		<fabric8.label.group>quickstarts</fabric8.label.group>
 		<fabric8.iconRef>camel</fabric8.iconRef>
 
-		<google.calendar.client.version>v3-rev173-1.21.0</google.calendar.client.version>
+		<google.calendar.client.version>v3-rev190-1.22.0</google.calendar.client.version>
 	</properties>
 
 	<repositories>
