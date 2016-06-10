@@ -10,14 +10,6 @@
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
-  	<mirrors>
-    		<mirror>
-      			<id>internal-repository</id>
-      			<name>Maven Repository Manager running on repo.mycompany.com</name>
-			<url>http://nexus-ci.uki-ose3.saleslab.fab.redhat.com/content/groups/public/</url>
-      			<mirrorOf>*</mirrorOf>
-    		</mirror>
-  	</mirrors>
 	<profiles>
 		<profile>
 			<id>fusesource.repo</id>
