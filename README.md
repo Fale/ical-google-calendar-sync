@@ -61,7 +61,7 @@ The template file can be used to create an OpenShift application template by exe
 
 There are slightly differences here, as OpenShift required your GCAL_CLIENT_TOKEN_FILE to be mounted as a Secret. This can be done by executing the add secret command:
 
-	oc secrets new gcal google-client-secret.json
+    oc secrets new gcal google-client-secret.json
 
 This adds a new Secret 'gcal' to the namespace.
 

@@ -102,7 +102,18 @@ objects:
       delete: calendar-sync-template
       version: 2.2.0.redhat-079
     name: ${SERVICE_NAME}
-    
+
+- apiVersion: "v1"
+  kind: "PersistentVolumeClaim"
+  metadata:
+    name: "claim1"
+  spec:
+    accessModes:
+      - "ReadWriteOnce"
+    resources:
+      requests:
+        storage: "5Gi"
+
 - apiVersion: v1
   kind: DeploymentConfig
   metadata:
@@ -143,6 +154,9 @@ objects:
           - name: secret-volume
             secret:
               secretName: ${GCAL_CLIENT_TOKEN_FILE_SECRET}
+          - name: "pvol"
+            persistentVolumeClaim:
+              claimName: "claim1"
         containers:
         - env:
           - name: GCAL_ACCESS_TOKEN
@@ -178,7 +192,9 @@ objects:
           volumeMounts:
             - name: secret-volume
               mountPath: ${GCAL_CLIENT_TOKEN_VOLUME}
-          terminationMessagePath: /dev/termination-log
+            - name: "pvol"
+              mountPath: "/data"
+              terminationMessagePath: /dev/termination-log
         dnsPolicy: ClusterFirst
         restartPolicy: Always
         securityContext: {}
