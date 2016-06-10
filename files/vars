@@ -1,0 +1,6 @@
+export GCAL_CLIENT_TOKEN_FILE=/Users/mentenza/GIT/ical-google-calendar-sync/googlefiles/google-client-secret.json
+export GCAL_ACCESS_TOKEN=ya29.Ci_9AjlGxpufaJx2RoxnOyAOTLw3Uyg-NuIIoezpAmZ_S9qGKrhWDz1P6jSEy-LD-w
+export GCAL_REFRESH_TOKEN=1/xO_yPzu9fxj-cB4-Ac1OjmV0cI-_73DxcUGMu8ZTQ0o
+export GCAL_REFRESH_RATE_SECONDS=600
+export ICAL_ENDPOINT=http://ptapps.redhat.com/alloc/export/7241792/allocation.ics
+export GCAL_TARGET_CALENDAR=TEST01

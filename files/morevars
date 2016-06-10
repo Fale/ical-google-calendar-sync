@@ -1,0 +1,9 @@
+oc policy add-role-to-user admin user@redhat.com
+
+GCAL_ACCESS_TOKEN -- ya29.Ci_9AgCP-lUigkwhpO1C42Y43GjGKqI2BirJhO9sD1jW1Vo6Ykpuj8NeJv-BN7duCg
+GCAL_CLIENT_TOKEN_FILE -- google-client-secret.json
+GCAL_CLIENT_TOKEN_FILE_SECRET -- gcal
+GCAL_REFRESH_RATE_SECONDS -- 60
+GCAL_REFRESH_TOKEN -- 1/xO_yPzu9fxj-cB4-Ac1OjmV0cI-_73DxcUGMu8ZTQ0o
+GCAL_TARGET_CALENDAR -- hacktest
+ICAL_HTTP_ENDPOINT -- allocation.ics
