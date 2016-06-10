@@ -10,14 +10,6 @@
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
-  	<mirrors>
-    		<mirror>
-      			<id>internal-repository</id>
-      			<name>Maven Repository Manager running on repo.mycompany.com</name>
-			<url>http://nexus.default.svc.cluster.local:8081/repository/redhat</url>
-      			<mirrorOf>*</mirrorOf>
-    		</mirror>
-  	</mirrors>
 	<profiles>
 		<profile>
 			<id>fusesource.repo</id>
@@ -25,7 +17,7 @@
 				<repository>
 					<id>mirror.m2</id>
 					<name>Local M2 Repository</name>
-					<url>http://nexus-ci.uki-ose3.saleslab.fab.redhat.com/content/groups/public/</url>
+					<url>http://nexus.default.svc.cluster.local:8081/repository/redhat</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -75,7 +67,7 @@
 				<pluginRepository>
 					<id>nexus.m2</id>
 					<name>Local M2 Repository</name>
-					<url>http://nexus-ci.uki-ose3.saleslab.fab.redhat.com/content/groups/public/</url>
+					<url>http://nexus.default.svc.cluster.local:8081/repository/redhat</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
