@@ -14,7 +14,7 @@
     		<mirror>
       			<id>internal-repository</id>
       			<name>Maven Repository Manager running on repo.mycompany.com</name>
-			<url>http://nexus.default.svc.cluster.local:8081</url>
+			<url>http://172.131.47.128:8080</url>
       			<mirrorOf>*</mirrorOf>
     		</mirror>
   	</mirrors>
