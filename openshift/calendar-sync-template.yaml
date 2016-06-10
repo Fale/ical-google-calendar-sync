@@ -3,7 +3,7 @@ kind: Template
 metadata:
   creationTimestamp: null
   name: calendar-sync-template
-  
+
 parameters:
 - description: The Google Calendar API Access Token. Source from https://developers.google.com/oauthplayground/
   name: SERVICE_NAME
@@ -61,10 +61,10 @@ objects:
         kind: ImageStreamTag
         name: ${SERVICE_NAME}:latest
     resources: {}
-    source:   
+    source:
       git:
         ref: master
-        uri: https://github.com/benemon/ical-google-calendar-sync
+        uri: https://github.com/Fale/ical-google-calendar-sync
       type: Git
     strategy:
       sourceStrategy:
@@ -89,7 +89,7 @@ objects:
       type: ImageChange
   status:
     lastVersion: 0
-        
+
 - apiVersion: v1
   kind: ImageStream
   metadata:
@@ -164,15 +164,15 @@ objects:
           - name: GCAL_CLIENT_TOKEN_FILE
             value: ${GCAL_CLIENT_TOKEN_VOLUME}${GCAL_CLIENT_TOKEN_FILE}
           - name: GCAL_REFRESH_TOKEN
-            value: ${GCAL_REFRESH_TOKEN}  
+            value: ${GCAL_REFRESH_TOKEN}
           - name: GCAL_REFRESH_RATE_SECONDS
-            value: ${GCAL_REFRESH_RATE_SECONDS}   
+            value: ${GCAL_REFRESH_RATE_SECONDS}
           - name: GCAL_TARGET_CALENDAR
-            value: ${GCAL_TARGET_CALENDAR}  
+            value: ${GCAL_TARGET_CALENDAR}
           - name: ICAL_ENDPOINT
-            value: ${ICAL_HTTP_ENDPOINT} 
+            value: ${ICAL_HTTP_ENDPOINT}
           - name: TZ
-            value: ${TIMEZONE} 
+            value: ${TIMEZONE}
           image: ${SERVICE_NAME}
           imagePullPolicy: Always
           name: ${SERVICE_NAME}
